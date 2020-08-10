@@ -1,4 +1,4 @@
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { TodoComponent } from './todo.component';
 
 describe('todo component tests', () => {
@@ -15,5 +15,10 @@ describe('todo component tests', () => {
     const control = component.form.get('name');
     control.setValue('');
     expect(control.invalid).toBeTruthy();
+  });
+  it('should make the email control valid', () => {
+    const control = component.form.get('email');
+    control.setValue('rafa@gmail.com');
+    expect(control.valid).toBeTruthy();
   });
 });

@@ -1,14 +1,9 @@
 
 language: node_js
 node_js:
-  - "12"
-dist: trusty
-sudo: required
-branches:
-  only:
-  - master
+  - "stable"
 before_script:
-  - npm install -g @angular/cli
+  - yarn global add @angular/cli
 script:
 - ng lint
-- npm run test-headless
+- yarn test-headless

@@ -27,4 +27,14 @@ describe('vote component tests', () => {
     // Assert
     expect(component.totalVotes).toBe(-1);
   });
+  it('should raise voteChange event when upvoted', () => {
+    let total = null;
+    component.voteChanged.subscribe((totalVotes) => {
+      total = totalVotes;
+    });
+    component.upVotes();
+    component.upVotes();
+    // expect(total).not.toBeNull();
+    expect(total).toBe(2);
+  });
 });

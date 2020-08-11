@@ -18,7 +18,7 @@ export class CallComponent implements OnInit {
     });
   }
 
-  add() {
+  add(): void  {
     const newCall = { title: '... ' };
     this.service.add(newCall).subscribe(
       (t) => this.calls.push(t),
@@ -26,7 +26,7 @@ export class CallComponent implements OnInit {
     );
   }
 
-  delete(id) {
+  delete(id): void  {
     if (confirm('Are you sure?')) {
       this.service.delete(id).subscribe();
     }

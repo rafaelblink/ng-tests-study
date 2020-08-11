@@ -1,4 +1,4 @@
-import { PresidentVoterComponent } from './president-voter.component';
+import { PresidentVoterComponent } from '../president-voter.component';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 describe('President vote component', () => {
@@ -30,5 +30,31 @@ describe('President vote component', () => {
       By.css('.glyphicon-menu-up')
     );
     expect(debugElement.classes.highlighted).toBeTruthy();
+  });
+  it('should increase total votes when I click up vote button', () => {
+    const button = fixture.debugElement.query(By.css('.glyphicon-menu-up'));
+    button.triggerEventHandler('click', null);
+
+    expect(component.totalVotes).toBe(1);
+  });
+  it('should decrease total votes when I click down vote button', () => {
+    component.myVote = -1;
+    const button = fixture.debugElement.query(By.css('.glyphicon-menu-down'));
+    button.triggerEventHandler('click', null);
+
+    expect(component.totalVotes).toBe(-1);
+  });
+  it('should decrease total votes when I click down vote button', () => {
+    const button = fixture.debugElement.query(By.css('.glyphicon-menu-down'));
+    button.triggerEventHandler('click', null);
+
+    expect(component.totalVotes).toBe(-1);
+  });
+  it('should page have title inside wrapper voter', () => {
+    const wrapper = fixture.debugElement.query(
+      By.css('section[data-test="wrapper-voter"]')
+    );
+    const title = wrapper.query(By.css('h2')).nativeElement as HTMLElement;
+    expect(title.innerText).toBe('President Voter');
   });
 });

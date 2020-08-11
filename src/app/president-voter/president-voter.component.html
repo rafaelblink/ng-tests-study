@@ -1,15 +1,18 @@
-<div class="voter">
-  <i
-    class="glyphicon glyphicon-menu-up vote-button"
-    [class.highlighted]="myVote === 1"
-    (click)="upVote()"
-  ></i>
+<section data-test="wrapper-voter">
+  <h2>President Voter</h2>
+  <div class="voter">
+    <i
+      class="glyphicon glyphicon-menu-up vote-button"
+      [class.highlighted]="myVote === 1"
+      (click)="upVote()"
+    ></i>
 
-  <span class="vote-count">{{ totalVotes }}</span>
+    <span class="vote-count">{{ totalVotes }}</span>
 
-  <i
-    class="glyphicon glyphicon-menu-down vote-button"
-    [class.highlighted]="myVote === -1"
-    (click)="downVote()"
-  ></i>
-</div>
+    <i
+      class="glyphicon glyphicon-menu-down vote-button"
+      [class.highlighted]="myVote === -1"
+      (click)="downVote()"
+    ></i>
+  </div>
+</section>

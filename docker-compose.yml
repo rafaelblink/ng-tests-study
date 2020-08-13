@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ng-tests-study:
+    image: ng-tests-study
+    build: .
+    ports:
+      - 8081:80

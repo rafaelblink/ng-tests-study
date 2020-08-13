@@ -1,6 +1,6 @@
-[![Open Source Love svg2](https://github.com/aleen42/badges/raw/master/src/angular.svg)](https://github.com/ellerbrock/open-source-badges/)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-![alt text](https://api.travis-ci.org/rafaelblink/ng-tests-study.svg "Status Travis")
+[![Open Source Love svg2](https://github.com/aleen42/badges/raw/master/src/angular.svg)](https://angular.io)
+[![Build Status](https://travis-ci.com/rafaelblink/ng-tests-study.svg?branch=master)](https://travis-ci.com/rafaelblink/ng-tests-study)
+[![Build Status](https://img.shields.io/docker/image-size/rafaelblink/ng-tests-study)](https://hub.docker.com/r/rafaelblink/ng-tests-study)
 
 # NgTestsStudy
 
